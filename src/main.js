@@ -1,4 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { VuelidatePlugin } from '@vuelidate/core';
+import { createApp } from 'vue';
+import App from './App.vue';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(VuelidatePlugin);
+app.config.devtools = true;
+app.mount('#app');
